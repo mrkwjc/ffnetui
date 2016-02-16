@@ -1,5 +1,3 @@
-* update README
-
 For next release:
 * Better layered graph for imlgraph
 * start and stop animations outside training thread. 

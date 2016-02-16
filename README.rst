@@ -1,4 +1,3 @@
-
 ===============================================================
 ffnetui: GUI for ffnet - feed-forward neural network for python
 ===============================================================
@@ -33,9 +32,3 @@ ffnetui depends on:
 
 * `matplotlib <http://matplotlib.sourceforge.net>`_
 
-Release notes
--------------
-
-0.8.3
-+++++
-This is first public release.
