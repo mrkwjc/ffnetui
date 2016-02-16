@@ -23,7 +23,7 @@ except ImportError:
         metadata['install_requires'] += ['pyside>=1.2']  # Install also pyside if no backend is found
         metadata['requires'] += ['pyside']
 
-from version import version
+from ffnetui.version import version
 
 if __name__ == "__main__":
     setup(name              = 'ffnetui',
