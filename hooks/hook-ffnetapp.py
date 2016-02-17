@@ -26,6 +26,6 @@ elif toolkit == 'qt4':
 else:
     pass
 
-datas += [('./images/*.*',  'images')]
-datas += [('./plots/images/*.*',  'plots/images')]
-datas += [('./data/*',  'data')] 
+datas += [('ffnetui/images/*.*',  'images')]
+datas += [('ffnetui/plots/images/*.*',  'plots/images')]
+datas += [('ffnetui/data/*',  'data')]
