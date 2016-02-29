@@ -148,7 +148,13 @@ class FFnetApp(HasTraits):
 
     def cite(self):
         from pyface.api import information
-        citations = open('data/cite.txt', 'r').read()
+        import os
+        try:
+            basedir = os.path.dirname(os.path.realpath(__file__)) + '/'
+        except NameError:  #__file__ not defined if this is main script
+            basedir = ''
+        fname = basedir + 'data/cite.txt'
+        citations = open(fname, 'r').read()
         msg = u'You are encouraged to cite in your papers one (or all) of the following:\n\n\n' + \
                 unicode(citations, 'utf-8').replace(u'\ufeff', '')
         information(None, msg, title = "Citing ffnet/ffnetui")
