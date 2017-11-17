@@ -12,20 +12,19 @@
 ## Look for available toolkits - prefer 'wx'
 from traits.etsconfig.api import ETSConfig
 try:
-    import wx
-    if wx.VERSION[0] == 2 and wx.VERSION[1] == 8:
-        ETSConfig.toolkit = 'wx'
-    else:
-        raise ImportError
-except ImportError:
+    import wxversion
+    wxversion.select('2.8')
+    ETSConfig.toolkit = 'wx'
+except:
     try:
         import PySide
         ETSConfig.toolkit = 'qt4'
     except ImportError:
-        import PyQt4
-        ETSConfig.toolkit = 'qt4'
-    else:
-        raise ImportError('Neither "wx (2.8)" nor "qt4" backends are available.')
+        try:
+            import PyQt4
+            ETSConfig.toolkit = 'qt4'
+        except ImportError:
+            raise ImportError('Neither "wx (2.8)" nor "qt4" backends are available.')
 
 ## Define main functions
 from ffnetapp import FFnetApp

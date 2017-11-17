@@ -143,7 +143,7 @@ class FFnetApp(HasTraits):
 
     def donate(self):
         import webbrowser
-        url = 'https://sourceforge.net/p/ffnet/donate'
+        url = 'https://www.paypal.me/MarekWojciechowski/10usd'
         webbrowser.open(url)
 
     def cite(self):
