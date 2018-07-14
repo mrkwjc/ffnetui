@@ -13,7 +13,7 @@
 from traits.etsconfig.api import ETSConfig
 try:
     import wxversion
-    wxversion.select('2.8')
+    wxversion.select('3.0')
     ETSConfig.toolkit = 'wx'
 except:
     try:
